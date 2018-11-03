@@ -1,0 +1,7 @@
+cc_test {
+    name: "modetest-single-buffer",
+    defaults: ["libdrm_defaults"],
+    srcs: ["modetest-single-buffer.c"],
+
+    shared_libs: ["libdrm"],
+}
