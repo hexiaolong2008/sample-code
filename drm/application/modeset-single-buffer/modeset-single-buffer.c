@@ -1,3 +1,8 @@
+/*
+ * Author: Leon.He
+ * e-mail: 343005384@qq.com
+ */
+
 #define _GNU_SOURCE
 #include <errno.h>
 #include <fcntl.h>
