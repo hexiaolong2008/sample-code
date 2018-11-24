@@ -1,0 +1,7 @@
+cc_test {
+    name: "modeset-double-buffer",
+    defaults: ["libdrm_defaults"],
+    srcs: ["modeset-double-buffer.c"],
+
+    shared_libs: ["libdrm"],
+}
