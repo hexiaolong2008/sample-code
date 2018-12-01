@@ -1,0 +1,7 @@
+cc_test {
+    name: "modeset-page-flip",
+    defaults: ["libdrm_defaults"],
+    srcs: ["modeset-page-flip.c"],
+
+    shared_libs: ["libdrm"],
+}
