@@ -1,0 +1,7 @@
+cc_test {
+    name: "modeset-plane-test",
+    defaults: ["libdrm_defaults"],
+    srcs: ["modeset-plane-test.c"],
+
+    shared_libs: ["libdrm"],
+}
