@@ -1,0 +1,7 @@
+cc_test {
+    name: "modeset-atomic-crtc",
+    defaults: ["libdrm_defaults"],
+    srcs: ["modeset-atomic-crtc.c"],
+
+    shared_libs: ["libdrm"],
+}
