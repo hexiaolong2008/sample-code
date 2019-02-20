@@ -1,0 +1,7 @@
+cc_test {
+    name: "modeset-atomic-plane",
+    defaults: ["libdrm_defaults"],
+    srcs: ["modeset-atomic-plane.c"],
+
+    shared_libs: ["libdrm"],
+}
