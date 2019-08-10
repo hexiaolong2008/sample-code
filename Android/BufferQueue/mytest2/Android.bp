@@ -1,0 +1,19 @@
+// Build the unit tests,
+
+// Build the binary to $(TARGET_OUT_DATA_NATIVE_TESTS)/$(LOCAL_MODULE)
+// to integrate with auto-test framework.
+cc_test {
+    name: "mytest2",
+
+    srcs: ["mytest2.cpp"],
+
+    clang: true,
+
+    shared_libs: [
+        "liblog",
+        "libbinder",
+        "libgui",
+        "libui",
+        "libutils",
+    ],
+}
