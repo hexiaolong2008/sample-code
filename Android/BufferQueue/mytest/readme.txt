@@ -4,4 +4,8 @@
 
 subdirs = ["*"]
 
-3. 有任何问题，请发邮件到343005384@qq.com
+3. mmm frameworks/native/libs/gui/ -j8
+
+4. 编译完成后会在out目录下对应的data/nativetests目录生成mytest文件夹
+
+4. 有任何问题，请发邮件到343005384@qq.com
