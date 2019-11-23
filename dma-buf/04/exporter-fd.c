@@ -18,8 +18,6 @@
 struct dma_buf *dmabuf_exported;
 EXPORT_SYMBOL(dmabuf_exported);
 
-static int fd = -1;
-
 static struct sg_table *exporter_map_dma_buf(struct dma_buf_attachment *attachment,
 					 enum dma_data_direction dir)
 {
@@ -93,7 +91,7 @@ static struct dma_buf *exporter_alloc_page(void)
 
 static long exporter_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 {
-	fd = dma_buf_fd(dmabuf_exported, O_CLOEXEC);
+	int fd = dma_buf_fd(dmabuf_exported, O_CLOEXEC);
 
         if (copy_to_user((int __user *)arg, &fd, sizeof(fd)))
 		return -EFAULT;
