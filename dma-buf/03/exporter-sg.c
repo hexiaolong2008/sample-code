@@ -45,8 +45,8 @@ static struct sg_table *exporter_map_dma_buf(struct dma_buf_attachment *attachme
 		return ERR_PTR(err);
 	}
 
-	sg_dma_address(table->sgl) = virt_to_phys(vaddr);
 	sg_dma_len(table->sgl) = PAGE_SIZE;
+	sg_dma_address(table->sgl) = dma_map_single(NULL, vaddr, PAGE_SIZE, dir);
 
 	return table;
 }
@@ -55,6 +55,7 @@ static void exporter_unmap_dma_buf(struct dma_buf_attachment *attachment,
 			       struct sg_table *table,
 			       enum dma_data_direction dir)
 {
+	dma_unmap_single(NULL, sg_dma_address(table->sgl), PAGE_SIZE, dir);
 	sg_free_table(table);
 	kfree(table);
 }
