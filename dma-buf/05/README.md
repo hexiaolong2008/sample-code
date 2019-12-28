@@ -1,6 +1,6 @@
 ## 说明
-exporter-mmap.c - exporter 内核驱动
-mmap_exporter.c - userspace应用程序
+* exporter-mmap.c - exporter 内核驱动
+* mmap_exporter.c - userspace应用程序
 
 ## 驱动编译
 1. 拷贝 exporter-mmap.c 文件到 linux-4.14.143/drivers/dma-buf/ 目录下。
