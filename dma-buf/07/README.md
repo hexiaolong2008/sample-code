@@ -1,7 +1,7 @@
 ## 说明
-exporter-sync.c - exporter 内核驱动
-importer-sync.c - importer 内核驱动
-dmabuf_sync.c - userspace应用程序
+* exporter-sync.c - exporter 内核驱动
+* importer-sync.c - importer 内核驱动
+* dmabuf_sync.c - userspace应用程序
 
 ## 驱动编译
 1. 拷贝 exporter-sync.c & importer-sync.c 文件到 linux-4.14.143/drivers/dma-buf/ 目录下。
