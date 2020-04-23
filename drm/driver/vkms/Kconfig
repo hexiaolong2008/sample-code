@@ -1,0 +1,14 @@
+config DRM_VKMS
+        tristate "Virtual KMS (EXPERIMENTAL)"
+        depends on DRM
+        select DRM_KMS_HELPER
+        select DRM_KMS_CMA_HELPER
+        select DRM_GEM_CMA_HELPER
+        default n
+        help
+          Virtual Kernel Mode-Setting (VKMS) is used for testing or for
+          running GPU in a headless machines. Choose this option to get
+          a VKMS.
+
+          If M is selected the module will be called vkms.
+
